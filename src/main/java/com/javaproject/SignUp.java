@@ -55,19 +55,25 @@ public class SignUp {
         stage.close();
     }
 
-
+    private boolean valueIsValid(TextField textField) {
+        return !textField.getText().isBlank();
+    }
 
     public void registerButtonOnAction(ActionEvent event) {
-        if (!firstName.getText().isBlank() && !secondName.getText().isBlank() && !passwordEnter.getText().isBlank() &&
-                !locationField.getText().isBlank() && !phoneNumber.getText().isBlank() && !emailField.getText().isBlank() && !genderField.getText().isBlank()) {
+        var password = passwordEnter.getText();
+        var passwordConfirmation = confirmPassword.getText();
 
-            if (passwordEnter.getText().equals(confirmPassword.getText())) {
-                registerUser();
-                confirmPassword.setText("");
-            }
+        if (isValidInput() && password.equals(passwordConfirmation)) {
+            registerUser();
+            confirmPassword.setText("");
         }
         else
-            messagelable.setText("Fill all the field");
+            messagelable.setText("Fill all the fields.");
+    }
+
+    private boolean isValidInput() {
+        return valueIsValid(firstName) && valueIsValid(secondName) && valueIsValid(passwordEnter)
+            && valueIsValid(locationField) && valueIsValid(phoneNumber) && valueIsValid(genderField);
     }
 
     public void registerUser(){
