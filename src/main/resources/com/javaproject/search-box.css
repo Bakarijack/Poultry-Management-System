@@ -1,0 +1,49 @@
+.search-box{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100px;
+}
+
+.transparent{
+    -fx-background-color: rgba(0, 0, 0,0);
+}
+
+.search-button{
+    -fx-background-color: #828282;
+    -fx-background-radius: 30px;
+}
+
+.right-bar{
+    -fx-background-color: #D3D3D3;
+}
+
+.login{
+    -fx-background-color: #828282;
+    -fx-background-radius: 30px;
+}
+
+.radiuses{
+    -fx-background-radius: 30px;
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.1),10.0,0.0,0.0,10.0);
+}
+.chosen-egg-card{
+    -fx-background-color: #F16C31;
+    -fx-background-radius: 30px;
+}
+
+.combo-box{
+    -fx-background-color: rgba(255, 255, 255,0.1);
+    -fx-background-radius: 30px;
+}
+
+.add-btn{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100px
+}
+
+.egg-item{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30px;
+}
